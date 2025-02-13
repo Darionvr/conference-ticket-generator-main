@@ -1,0 +1,324 @@
+#root {
+
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(245, 15%, 58%);
+  --Neutral-700: hsl(245, 19%, 35%);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+}
+
+/************************ HEADER ************************/
+
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: clamp(26px, 3rem, 3vw) ;
+}
+
+header p {
+  color: var(--Neutral-300);
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.logo-full {
+  margin-bottom: 2rem;
+}
+
+
+/************************ DRAG N DROP ************************/
+
+.dragdrop {
+  border: 2px dashed var(--Neutral-500);
+  padding: 1rem;
+  background-color: hsla(252, 6%, 83%, 0.119);
+  border-radius: 15px;
+  color: var(--Neutral-300);
+  margin: .5rem 0 .5rem 0;
+  backdrop-filter: blur(2px);
+  text-align: center;
+  width: 25rem;
+
+}
+
+.dragdrop:hover {
+  background-color: hsla(252, 6%, 83%, 0.301);
+  cursor: pointer;
+
+}
+
+.dragdrop:hover .icon-upload {
+  border: 1px solid var(--Neutral-500);
+}
+
+.dragdrop:focus {
+  border: 2px solid var(--Neutral-900);
+  outline: 1px solid var(--Neutral-500);
+}
+
+.labelbrowse {
+  display: block;
+  cursor: pointer;
+}
+
+.icon-upload {
+  border: 1px solid var(--Neutral-700);
+  padding: .5rem;
+  border-radius: 8px;
+  background-color: hsla(252, 6%, 83%, 0.119);
+  margin-bottom: .5rem;
+  box-shadow: 1px 1px 1px var(--Neutral-900);
+}
+
+.icon-upload:hover {
+  cursor: pointer;
+}
+
+.filesType {
+  font-size: .7rem;
+  color: var(--Neutral-500);
+  display: flex;
+  align-items:center;
+  gap: .5rem;
+}
+
+.dragdrop.dragging {
+  outline: 1px solid var(--Neutral-500);
+  background-color: hsla(252, 6%, 83%, 0.301);
+
+}
+
+/************************ AVATAR PREVIEW ************************/
+.file-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.image-preview {
+  width: 3rem;
+
+}
+
+.image-preview img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--Neutral-500);
+}
+
+.file-actions {
+  display: flex;
+  gap: .5rem;
+}
+
+.file-actions label {
+  display: block;
+  background-color: hsla(252, 6%, 83%, 0.236);
+  font-family: Inconsolata;
+  color: var(--Neutral-300);
+  padding: .3rem;
+  border-radius: 5px;
+  font-size: .7rem;
+
+}
+
+.remove-btn {
+  background-color: hsla(252, 6%, 83%, 0.236);
+  border: none;
+  font-family: Inconsolata;
+  color: var(--Neutral-300);
+  padding: .3rem;
+  border-radius: 5px;
+  font-size: .7rem;
+  text-decoration: underline;
+}
+
+
+/************************ FORM ************************/
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+input {
+  background-color: hsla(252, 6%, 83%, 0.119);
+  border-radius: 8px;
+  border: 1px solid var(--Neutral-500);
+  padding: .8rem;
+  font-family: Inconsolata;
+  margin: .5rem 0 1rem 0;
+  backdrop-filter: blur(2px);
+  color: var(--Neutral-300);
+}
+
+input:active {
+  font-family: Inconsolata;
+  color: var(--Neutral-300);
+  
+}
+
+input:focus {
+  border: 2px solid var(--Neutral-900);
+  outline: 1px solid var(--Neutral-500);
+  
+}
+
+input::placeholder {
+  color: var(--Neutral-300);
+}
+
+input:hover {
+  background-color: hsla(252, 6%, 83%, 0.301);
+  cursor: pointer;
+}
+
+.generator {
+  border: none;
+  background-color: var(--Orange-500);
+  padding: .8rem;
+  color: var(--Neutral-900);
+  font-family: Inconsolata;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 8px;
+
+}
+
+.generator:hover {
+  cursor: pointer;
+  background-color: var(--Orange-700);
+}
+
+.generator:focus {
+  border: 2px solid var(--Neutral-900);
+  outline: 1px solid var(--Neutral-500);
+  
+}
+
+.error {
+  font-size: .7rem;
+  color: var(--Orange-500);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  
+}
+
+/************************ TICKET  ************************/
+
+.name-gradient {
+
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(left, hsl(7, 86%, 67%) , hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+
+
+}
+.email-ticket{
+  color: var(--Orange-500);
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.ticket-container {
+  position: relative;
+
+}
+
+.ticket {
+  position: relative;
+  width: 500px;
+}
+
+.logo-ticket {
+  position: absolute;
+  left: 5%;
+  top: 8%;
+}
+
+.date-ticket {
+  position: absolute;
+  left: 14%;
+  top: 24%;
+  color: var(--Neutral-300);
+}
+
+.user-data {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  color: var(--Neutral-300);
+}
+
+.avatar-ticket {
+  width: 4rem;
+  border-radius: 10px;
+}
+
+.name-ticket {
+  font-size: 1.5rem;
+}
+
+.github-ticket {
+  display: flex;
+  align-items: flex-end;
+  color: var(--Neutral-300);
+}
+
+.number {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 3%;
+  bottom: 45%;
+  font-size: 1.5rem;
+  color: var(--Neutral-500);
+}
+.logo-reset {
+  margin-bottom: 2rem;
+
+}
+.logo-reset:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .logo-full, .logo-reset {
+    width: 10rem;
+  }
+  
+
+  .dragdrop{
+    width: 18rem;
+  }
+  form{
+    margin-bottom: 4rem;
+  }
+
+  .ticket{
+    width: 22rem    
+  }
+  .date-ticket{
+    font-size: .8rem;
+  }
+  .logo-ticket{
+    width: 10rem;
+  }
+  .name-ticket{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .github-ticket{
+    font-size: .8rem;
+  }
+}

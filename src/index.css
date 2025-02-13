@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+}
+
+#root{
+  
+--Neutral-0: hsl(0, 0%, 100%);
+font-family: Inconsolata;
+color: var(--Neutral-0);
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100%;
+
+
+}
+body{
+height: 100vh;
+background-image: 
+url(/images/pattern-lines.svg), 
+url(/images/pattern-circle.svg),
+url(/images/pattern-circle.svg),
+url(/images/pattern-squiggly-line-bottom-desktop.svg),
+url(/images/pattern-squiggly-line-top.svg),
+url(/images/background-desktop.png);
+background-size:
+    contain, 
+    10%, 
+    10%,
+    55%, 
+    30%,
+    cover;
+    
+    
+  background-position: 
+    top, 
+    80% 60%, 
+    5% -10%,
+    bottom left, 
+    100% 10%;
+
+  background-repeat:
+    repeat-x,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+background-attachment: fixed;
+  
+}
+
+@media (max-width: 375px) {
+  body{
+    background-image: 
+    url(/images/pattern-lines.svg), 
+    url(/images/pattern-circle.svg),
+    url(/images/pattern-circle.svg),
+    url(/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+    url(/images/pattern-squiggly-line-top.svg),
+    url(/images/background-mobile.png);
+    
+
+    background-size:
+    cover, 
+    10%, 
+    10%,
+    55%, 
+    30%,
+    cover;
+
+    background-repeat:
+    repeat-x,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  }
+  
+
+
+}
